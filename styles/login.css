@@ -1,0 +1,19 @@
+input{
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color:  white;
+    color: black;
+}
+input:hover{
+    border-bottom: 1px solid rgb(63, 225, 184);
+    transition: 0.3s;
+    background-color: transparent;
+    color: black;
+}
+.modal-header{
+    background-color: #4AAD85;
+}
+label{
+    color: black;
+    background-color: transparent;
+}
