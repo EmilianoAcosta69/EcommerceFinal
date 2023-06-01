@@ -58,11 +58,9 @@ const login = (event) =>{
                 deslogueoSesion(id);
             }else{
             
-            const padreSesionLogueada = document.querySelector('.sesionLogueada');
-            padreSesionLogueada.appendChild(sesionLogueada);
-
                 document.querySelector('#buttonInicioSesion').remove();
                 document.querySelector('.linkAdmin').textContent = 'Administracion';
+                
             }
             
 
