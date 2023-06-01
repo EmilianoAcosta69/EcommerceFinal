@@ -13,7 +13,6 @@ class Producto{
 }
 
 
-
 let productos = [
     new Producto('HR1191','Running Terrex Soulstride' ,50.999,'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a42ad7da955e490b8526af5f00abad27_9366/Zapatillas_de_Trail_Running_Terrex_Soulstride_Negro_HR1191_01_standard.jpg'),
     new Producto('GW2009','Forum 84 Low' , 58.999 ,'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cbda5ef5ab0a4581bf75aeda015ae546_9366/Zapatillas_Forum_84_Low_Blanco_GW2009_01_standard.jpg'),
