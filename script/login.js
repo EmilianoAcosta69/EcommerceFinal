@@ -26,8 +26,8 @@ const login = (event) =>{
         if(verficacion){
 
             
-            console.log(users);
-            arrayUsers.push(users);
+            console.log(userFound);
+            arrayUsers.push(userFound);
             
             localStorage.setItem('arrayUsers',JSON.stringify(arrayUsers));
             localStorage.getItem('arrayUsers');
@@ -38,7 +38,7 @@ const login = (event) =>{
             const sesionLogueada = document.createElement('button');
             const id = new Date().getTime();
             sesionLogueada.id = id;
-            
+
             sesionLogueada.classList.add('mx-2','bg-success','text-light','my-2','p-2','rounded-2','class="SesionLogueada"');
             sesionLogueada.innerHTML = `
             <i onclick = "deslogueoSesion(${id})" class="fa-solid fa-right-to-bracket"></i>
@@ -53,7 +53,25 @@ const login = (event) =>{
             
             document.querySelector('.linkAdmin').textContent = 'Administracion';
 
-            // Administracion.classList.add()
+            const verficacion2 = arrayUsers !== [];
+            if(verficacion2){
+                sesionLogueada.classList.add('mx-2','bg-success','text-light','my-2','p-2','rounded-2','class="SesionLogueada"');
+                sesionLogueada.innerHTML = `
+            <i onclick = "deslogueoSesion(${id})" class="fa-solid fa-right-to-bracket"></i>
+            
+            `;
+            
+            const padreSesionLogueada = document.querySelector('.sesionLogueada');
+            
+            padreSesionLogueada.appendChild(sesionLogueada);
+
+            document.querySelector('#buttonInicioSesion').remove();
+            
+            document.querySelector('.linkAdmin').textContent = 'Administracion';
+            }else{
+                deslogueoSesion(id);
+            }
+            
 
         }else{
             alertMensaje2('Usuario o Contraseña Incorrectos');
