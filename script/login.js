@@ -53,14 +53,11 @@ const login = (event) =>{
             
             document.querySelector('.linkAdmin').textContent = 'Administracion';
 
-            const verficacion2 = arrayUsers == [];
-            if(verficacion2){
-                deslogueoSesion(id);
-            }else{
-            
+            const verficacion2 = arrayUsers !== [];
+
+            while(verficacion2){
                 document.querySelector('#buttonInicioSesion').remove();
                 document.querySelector('.linkAdmin').textContent = 'Administracion';
-                
             }
             
 
