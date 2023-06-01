@@ -35,13 +35,17 @@ const login = (event) =>{
             alertMensaje1('Inicio de Sesion Exitoso');
             document.querySelector('.formularioLogin').reset();
 
-            let sesionLogueada = document.createElement('button');
-            sesionLogueada.onclick = () => deslogueoSesion(id);
-            sesionLogueada.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i>`;
-            sesionLogueada.classList.add('mx-2','bg-success','text-light','my-2','p-2','rounded-2','class="SesionLogueada"', 'onclick="deslogueoSesion()"');
+            const sesionLogueada = document.createElement('button');
+            sesionLogueada.classList.add('mx-2','bg-success','text-light','my-2','p-2','rounded-2','class="SesionLogueada"');
+            sesionLogueada.innerHTML = `
+            <i onclick = "deslogueoSesion(${id})" class="fa-solid fa-right-to-bracket"></i>
+            
+            `;
+            
             const padreSesionLogueada = document.querySelector('.sesionLogueada');
             
             padreSesionLogueada.appendChild(sesionLogueada);
+
             document.querySelector('#buttonInicioSesion').remove();
             
             document.querySelector('.linkAdmin').textContent = 'Administracion';
