@@ -1,17 +1,21 @@
 class User{
-    constructor(email,password){
+    constructor(id,email,password){
+        this.id = id;
         this.email = email;
         this.password = password;
     }
 }
 
 const users = [
-    new User('admin@gmail.com' , '1234'),
-    new User('emiliano@gmail.com','123456')
+    new User('admin','admin@gmail.com' , '1234'),
+    new User('invited','emiliano@gmail.com','123456')
 ]
+
+let arrayUsers = JSON.parse(localStorage.getItem('arrayUsers')) || [];
 
 const login = (event) =>{
     event.preventDefault();
+
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -19,8 +23,16 @@ const login = (event) =>{
     if(userFound){
         const verficacion =userFound.email = email && userFound.password == password;
         if(verficacion){
-            alertMensaje1('Entro');
+
+            console.log(userFound);
+            arrayUsers.push(userFound);
+
+            localStorage.setItem('arrayUsers',JSON.stringify(arrayUsers));
+            localStorage.getItem('arrayUsers');
+
+            alertMensaje1('Inicio de Sesion Exitoso');
             document.querySelector('.formularioLogin').reset();
+            document.querySelector('.formularioLogin').location.reload(userFound);
 
             let sesionLogueada = document.createElement('button');
             sesionLogueada.onclick = () => deslogueoSesion(userFound);
@@ -65,7 +77,13 @@ function alertMensaje2(mensaje){
 }
 
 function deslogueoSesion(userFound){
-    window.location.reload(userFound);
+
+    const singOutUser = document.getElementById(userFound);
+    arrayUsers = arrayUsers.filter(user => {user.id !== id});
+    localStorage.setItem('arrayUsers',JSON.stringify(arrayUsers));
+    singOutUser.remove(userFound);
+    // window.location.reload(userFound);
+
 }
 
 // function obetenerDatosUsarios(){
