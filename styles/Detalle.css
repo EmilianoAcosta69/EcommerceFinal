@@ -107,13 +107,11 @@ margin-top: 15px;
 
 @media  (max-width: 750px)  {
 
-    .container{
-       
-       flex-direction: column;
+    .container-padre{
+        flex-direction: column;
     }
     .carousel {
-        width: 100%;
-        
+        width: 100%; 
     }
 .detalle-del-producto{
     width: 100%;
