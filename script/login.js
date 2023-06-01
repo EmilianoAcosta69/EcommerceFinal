@@ -53,10 +53,16 @@ const login = (event) =>{
             
             document.querySelector('.linkAdmin').textContent = 'Administracion';
 
-            const verficacion2 = arrayUsers !== [];
+            const verficacion2 = arrayUsers == [];
             if(verficacion2){
-                sesionLogueada.classList.add('mx-2','bg-success','text-light','my-2','p-2','rounded-2','class="SesionLogueada"');
-                sesionLogueada.innerHTML = `
+                deslogueoSesion(id);
+            }else{
+                const sesionLogueada = document.createElement('button');
+            const id = new Date().getTime();
+            sesionLogueada.id = id;
+
+            sesionLogueada.classList.add('mx-2','bg-success','text-light','my-2','p-2','rounded-2','class="SesionLogueada"');
+            sesionLogueada.innerHTML = `
             <i onclick = "deslogueoSesion(${id})" class="fa-solid fa-right-to-bracket"></i>
             
             `;
@@ -65,11 +71,8 @@ const login = (event) =>{
             
             padreSesionLogueada.appendChild(sesionLogueada);
 
-            document.querySelector('#buttonInicioSesion').remove();
-            
-            document.querySelector('.linkAdmin').textContent = 'Administracion';
-            }else{
-                deslogueoSesion(id);
+                document.querySelector('#buttonInicioSesion').remove();
+                document.querySelector('.linkAdmin').textContent = 'Administracion';
             }
             
 
