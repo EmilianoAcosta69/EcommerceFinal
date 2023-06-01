@@ -87,7 +87,7 @@ function mostrarProductos(){
         const {id,codigo,nombre,precio,cantidad} = productos;
 
         const fila = document.createElement('tr');
-        fila.classList.add('d-block');
+        // fila.classList.add('d-block');
         const celdas = `
         <td>${codigo} </td>
         <td>${nombre} </td> 

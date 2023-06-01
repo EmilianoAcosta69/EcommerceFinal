@@ -26,6 +26,16 @@
     
 }
 
+@media(max-width:480px) {
+    .tablaProductos{
+        width: 60%;
+    }
+    .navbar{
+        width: 100%;
+    }
+}
+
+
 
 
 
