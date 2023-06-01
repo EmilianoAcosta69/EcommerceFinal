@@ -32,7 +32,6 @@ const login = (event) =>{
 
             alertMensaje1('Inicio de Sesion Exitoso');
             document.querySelector('.formularioLogin').reset();
-            document.querySelector('.formularioLogin').location.reload(userFound);
 
             let sesionLogueada = document.createElement('button');
             sesionLogueada.onclick = () => deslogueoSesion(userFound);
