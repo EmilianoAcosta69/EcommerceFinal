@@ -9,13 +9,12 @@
     width: 50%;
 }
 
-#botonBusqueda{
+/* #botonBusqueda{
     height: 70%;
     border-radius: 5px;
     padding: 10px;
     margin: auto;
-    
-}
+} */
 
 .carousel-item img{
     width: 70%;
@@ -78,14 +77,4 @@ h1{
     .barraBuscar1{
         width: 300px;
     }
-    
-    
 }
-
-/* @media (max-width:400){
-    .carousel-item img{
-        margin: auto;
-        height: 50vh;
-        width: 65vw;
-    }   
-} */

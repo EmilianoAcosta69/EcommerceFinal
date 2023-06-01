@@ -25,7 +25,7 @@
     <!--Nav-Bar-->
     <nav class=" navbar navbar-expand-lg bg-dark-subtle ">
         <div class="navEcommerce container-fluid d-flex m-auto">
-            <a class="navbar-brand" href="./index.html">Sports Shoes </a>
+            <a class="navbar-brand" href="./index.html">Sports Shoes</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -43,12 +43,11 @@
                     <li><a class="linkAdmin nav-link" href="./pages/Admin.html"></a></li>
                 </ul>
                 <form class="d-flex m-auto barraBuscar1 m-auto" role="search">
-                    <input class="barraBuscar form-control " type="search" placeholder="Buscar"
-                        aria-label="Search">
+                    <input class="barraBuscar form-control " type="search" placeholder="Buscar" aria-label="Search">
                 </form>
 
                 <!-- Modal Iniciar Sesion-->
-                <button type="button" class="btn btn-success my-2 p-1 d-flex m-auto" data-bs-toggle="modal"
+                <button type="button" class="btn btn-success d-flex mx-2 my-2" data-bs-toggle="modal"
                     data-bs-target="#exampleModal" id="buttonInicioSesion">Iniciar Sesión</button>
                 <button class="sesionLogueada bg-dark-subtle"></button>
                 <!--Inicio de Sesion-->
@@ -71,11 +70,13 @@
                                             <input type="email" class="w-100 border-top-0 border-end-0 border-start-0"
                                                 id="email" required>
                                         </div>
+                                        <!--id="email"-->
                                         <div class="mb-3">
                                             <label for="password" class="form-label">Contraseña</label>
                                             <input type="password"
-                                                class=" w-100 border-top-0 border-end-0 border-start-0" id="password"
+                                                class=" w-100 border-top-0 border-end-0 border-start-0" id="password"  
                                                 required>
+                                                <!--id="password"--> 
                                         </div>
                                         <button class="btn btn-success my-3 d-block m-auto" type="submit">Iniciar
                                             Sesión</button>
@@ -107,7 +108,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form>
+                                <form onsubmit="regiterHandler(event)">
                                     <div class="mb-3">
                                         <label for="exampleInputName" class="form-label">Nombre</label>
                                         <input type="text" class="w-100 border-top-0 border-end-0 border-start-0"
@@ -127,6 +128,17 @@
                                         <label for="exampleInputPassword" class="form-label">Contraseña</label>
                                         <input type="password" class=" w-100 border-top-0 border-end-0 border-start-0"
                                             id="InputPassword">
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center text-center">
+                                        <p class="warnings" id="textInfo"></p>
+                                    </div>
+                                    <div class="redes d-flex justify-content-center flex-column mb-5 w-100 text-center">
+                                        <h6 class="mb-4">Registrate con:</h6>
+                                        <div class="logo d-flex justify-content-around">
+                                            <div class="primera-img"><a href="" class="img-logo d-flex justify-content-center"><img src="./assets/facebook.png" style="width: 70px;" alt="..."></a></div>
+                                            <a href="" class="img-logo d-flex justify-content-center"><img src="./assets/instagram.png" style="width: 70px;" alt="..."></a>
+                                            <a href="" class="img-logo d-flex justify-content-center"><img src="./assets/gorjeo.png" style="width: 70px;" alt="..."></a>
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary mt-3 ms-2"
@@ -158,7 +170,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn btn-success my-2 p-2 d-flex m-auto" data-bs-toggle="modal"
+        <button type="button" class="btn btn-success  d-flex mx-2" data-bs-toggle="modal"
             data-bs-target="#exampleModal2" id="botonCarrito">
             <i class="fa-solid fa-cart-shopping"></i>
         </button>

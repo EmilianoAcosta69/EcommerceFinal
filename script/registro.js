@@ -25,7 +25,7 @@ function regiterHandler(e) {
             warnings += key + " esta vacio" + "<br>"
             verific = true
             if (verific) {
-                textInfo.innerHTML = warnings
+                textInfo.innerHTML = warnings;
             }
         } else {
             if (key == "Email") {
@@ -56,9 +56,9 @@ function regiterHandler(e) {
             }
 
             if (verific) {
-                textInfo.innerHTML = warnings
+                textInfo.innerHTML = warnings;
             } else {
-                textInfo.innerHTML = ""
+                textInfo.innerHTML = "";
             }
         }
 

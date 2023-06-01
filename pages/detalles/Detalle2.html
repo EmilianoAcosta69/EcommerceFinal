@@ -22,7 +22,7 @@
 <body>
     <nav class=" navbar navbar-expand-lg bg-dark-subtle ">
         <div class="navEcommerce container-fluid d-flex m-auto">
-            <a class="navbar-brand" href="/index.html"><b>Sports Shoes</b> </a>
+            <a class="navbar-brand" href="/index.html">Sports Shoes </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -40,11 +40,7 @@
                     <li><a class="linkAdmin nav-link" href="/pages/Admin.html"></a></li>
                 </ul>
                 <form class="d-flex m-auto  w-50" role="search">
-                    <input class="barraBuscar form-control me-2 my-2" type="search" placeholder="Buscar"
-                        aria-label="Search">
-                    <button id="botonBusqueda" class="mx-3 bg-light"><i
-                            class="fa-solid fa-magnifying-glass "></i></button>
-
+                    <input class="barraBuscar form-control me-2 my-2" type="search" placeholder="Buscar" aria-label="Search">
                 </form>
 
                 <!-- Modal Iniciar Sesion-->
@@ -138,35 +134,36 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!--Carrito-->
+                  <!--Carrito-->
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5 w-100 text-center " id="exampleModalLabel">Carrito</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body d-block m-auto justify-content-center " id="cart-body">
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 w-100 text-center " id="exampleModalLabel">Carrito</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-block m-auto justify-content-center " id="cart-body">
 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <a href="./pages/error404.html" type="button" class="btn btn-primary">Continuar
-                                Comprando</a>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="./pages/error404.html" type="button" class="btn btn-primary">Continuar
+                            Comprando</a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Button trigger modal -->
+        <!-- Button trigger modal -->
 
-            <button type="button" class="btn btn-success mx-2 my-2 p-2" data-bs-toggle="modal"
-                data-bs-target="#exampleModal2">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
+        <button type="button" class="btn btn-success mx-2 my-2 p-2" data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+            </div>
+
+          
         </div>
 
     </nav>
@@ -198,7 +195,7 @@
         
         
                 <div class="detalle-del-producto">
-                    <img src="./assets/imagen de adidas.jpg" alt="" width="40px">
+                    <img src="/assets/imagen de adidas.jpg" alt="" width="40px">
                     <div>
                     <span>Categoria: (Mujer)</span>
                 </div>
@@ -349,12 +346,50 @@
             </div>
 
 
+            <!--Inicio Footer-->
 
+    <!--Novedades-->
+    <div>
+        <form class="form-Novedades">
+            <span class="p-1"> <b>Suscribite y recibí nuestras ultimas novedades</b> </span>
+            <input class="inputEmail " type="email" autocomplete="off" placeholder="name@example.com" required>
+            <button type="submit" class="botonSuscribirse "> <b>Suscribirse</b> </button>
+        </form>
+    </div>
+
+    <footer class="conteiner-Footer">
+        <!--Logo-->
+        <div class="logo-Ecommerce">
+            <a href="#"><img src="./assets/logo6-removebg-preview.png" alt=""></a>
+        </div>
+
+
+        <!--Redes Sociales-->
+        <div class="conteiner-Redes">
+            <h4 class="titulos"> Síguenos en Nuestras Redes</h4>
+            <a href="https://twitter.com" target="_blank" class="iconoRedes fa-brands fa-twitter"></a>
+            <a href="https://facebook.com" target="_blank" class="iconoRedes fa-brands fa-facebook"></a>
+            <a href="https://instagram.com" target="_blank" class="iconoRedes fa-brands fa-instagram"></a>
+            <a href="https://linkedin.com" target="_blank" class="iconoRedes fa-brands fa-linkedin"></a>
+        </div>
+
+        <!--Informacion Adicional-->
+        <div class="conteiner-Informacion">
+            <h4 class="titulos">Información Adicional</h4>
+            <a href="#" class="button-Info">Acerca de Nosotros </a>
+            <a href="#" class="button-Info">Términos y Condiciones</a>
+        </div>
+    </footer>
+
+    <!--Copyright-->
+    <div class="conteiner-Derechos">
+        <span> Copyright <i class="fa-regular fa-copyright"></i> 2023 - <a href="#" class="nombreEc"><b>Sports Shoes</b>
+            </a> - Todos los derechos reservados</span>
+    </div>
 
         <script src="/script/admin.js"></script>
         <script src="/script/carrito.js"></script>
         <script src="/script/login.js"></script>
-        <script src="/script/index.js"></script>
         <script src="/script/registro.js"></script>
         <script src="https://kit.fontawesome.com/bc750fce37.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
