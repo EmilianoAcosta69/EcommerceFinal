@@ -25,9 +25,9 @@ const login = (event) =>{
         const verficacion =userFound.email = email && userFound.password == password;
         if(verficacion){
 
-            const id = new Date().getTime();
-            console.log(id);
-            arrayUsers.push(id);
+            
+            console.log(users);
+            arrayUsers.push(users);
             
             localStorage.setItem('arrayUsers',JSON.stringify(arrayUsers));
             localStorage.getItem('arrayUsers');
@@ -36,6 +36,9 @@ const login = (event) =>{
             document.querySelector('.formularioLogin').reset();
 
             const sesionLogueada = document.createElement('button');
+            const id = new Date().getTime();
+            sesionLogueada.id = id;
+            
             sesionLogueada.classList.add('mx-2','bg-success','text-light','my-2','p-2','rounded-2','class="SesionLogueada"');
             sesionLogueada.innerHTML = `
             <i onclick = "deslogueoSesion(${id})" class="fa-solid fa-right-to-bracket"></i>
@@ -87,7 +90,7 @@ function deslogueoSesion(id){
     arrayUsers = arrayUsers.filter(user => {user.userFound !== id});
     localStorage.setItem('arrayUsers',JSON.stringify(arrayUsers));
     singOutUser.remove(id);
-    // window.location.reload(userFound);
+    window.location.reload();
 
 }
 
