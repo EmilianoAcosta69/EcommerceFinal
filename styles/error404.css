@@ -1,0 +1,40 @@
+body{
+    background-color: #D9D9D9;
+    font-family:  'Poppins',sans-serif;
+    }
+.container{ margin: 50px 0px 50px 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.img404{
+    text-align: center;
+}
+.h1404{
+    color: #4AAD85;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.volveratras{
+    background-color:  #0e4730;
+text-decoration: none;
+color: #D9D9D9;
+border: solid  #4AAD85 1px;
+padding: 10px;
+}
+.volveratras:hover{
+    background-color: #4AAD85;
+}
+.containerhijo{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@media(max-width:600px){
+.img404{
+    width: 350px;
+    height: 140px;}
+}

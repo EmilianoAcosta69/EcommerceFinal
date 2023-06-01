@@ -1,4 +1,4 @@
-// let listaProductos = [];
+
 let listaProductos = JSON.parse(localStorage.getItem('listaProductos')) || []
 
 
@@ -26,7 +26,7 @@ const cantidadInput = document.querySelector('#cantidadProducto');
 
 const btnAgregar = document.querySelector('#btnAgregar');
 
-formCargarProducto.addEventListener('submit', validarFormulario);
+formCargarProducto.addEventListener("submit",validarFormulario);
 
 function validarFormulario(event) {
     event.preventDefault();
@@ -63,8 +63,6 @@ function agregarProducto(){
     mostrarProductos();
     formCargarProducto.reset();
     limpiarProducto();
-    
-    
 }
 
 function limpiarProducto(){
@@ -89,6 +87,7 @@ function mostrarProductos(){
         const {id,codigo,nombre,precio,cantidad} = productos;
 
         const fila = document.createElement('tr');
+        fila.classList.add('d-block');
         const celdas = `
         <td>${codigo} </td>
         <td>${nombre} </td> 
@@ -110,7 +109,7 @@ function mostrarProductos(){
         const eliminarBoton = document.createElement('button');
         eliminarBoton.onclick = () => eliminarProducto(id);
         eliminarBoton.innerHTML = '<i class="fa-solid fa-trash"></i>';
-        eliminarBoton.classList.add('btn', 'btn-Eliminar','btn-outline-danger','text-dark');
+        eliminarBoton.classList.add('btn', 'btn-Eliminar','btn-outline-danger','text-dark','mx-2');
         fila.appendChild(eliminarBoton);
 
         divProductos.appendChild(fila);
@@ -220,34 +219,9 @@ function alertMensaje1(mensaje){
     container.appendChild(alertMensaje);
 }
 
+
+
             
-
-            
-            // Administracion.classList.add()
-
-
-// function mostrarProductos1(){
-//     const cardProducto = document.createElement('div');
-//         cardProducto.id = producto.codigo;
-
-//         cardProducto.classList.add('card','mx-2')
-//         cardProducto.style.width = '18rem'
-//         cardProducto.innerHTML = `
-//         <img src=${imagenInput} class="card-img-top" alt=${nombreInput}>
-//         <div class="card-body">
-//             <h5 class="card-title text-center">${codigoInput}</h5>
-//             <p class="card-text text-center">${descripcionInput}</p>
-//             <p class="card-text text-center">$${precioInput}</p>
-//             <p class="card-text text-center">$${cantidadInput}</p>
-//             <p class="card-text text-center">$${categoriaSelect}</p>
-//             <a href="#" class="btn btn-primary d-block" onclick = "agregarCarrito(${producto.codigo})">Agregar al Carrito</a>
-//         </div>
-//         `; 
-
-//         const padreConteiner = document.querySelector('main');
-//         window.location = "principal.html";
-//         padreConteiner.appendChild(cardProducto);
-// }
 
 
 

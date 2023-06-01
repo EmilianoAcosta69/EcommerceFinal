@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Inicio de Links-->
-    <link rel="stylesheet" href="../styles/principal.css">
+    <link rel="stylesheet" href="../styles/aboutUs.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/Admin.css">
     <link rel="stylesheet" href="../styles/aboutUs.css">
@@ -20,9 +20,9 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid d-flex m-auto">
-            <a class="navbar-brand" href="../pages/principal.html">Sports Shoes</a>
+    <nav class=" navbar navbar-expand-lg bg-dark-subtle ">
+        <div class="navEcommerce container-fluid d-flex m-auto">
+            <a class="navbar-brand" href="../index.html">Sports Shoes </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -31,134 +31,150 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../pages/aboutUs.html">Acerca de Nosotros</a>
+                        <a class="nav-link active" aria-current="page" href="./aboutUs.html">Acerca de
+                            Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        
+
                     </li>
-                    <li><a class="linkAdmin nav-link" href="../pages/Admin.html"></a></li>
+                    <li><a class="linkAdmin nav-link" href="./pages/Admin.html"></a></li>
                 </ul>
-                <form class="d-flex m-auto  w-50" role="search">
-                    <input class="barraBuscar form-control me-2 my-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button id="botonBusqueda" class="mx-3 bg-light"><i class="fa-solid fa-magnifying-glass "></i></button>
-                    
-                </form>
-    
+                
+
                 <!-- Modal Iniciar Sesion-->
-                <button type="button" class="btn btn-success my-2 " data-bs-toggle="modal" data-bs-target="#exampleModal" id="buttonInicioSesion">Iniciar Sesión</button>
-                <button class="sesionLogueada"></button>
+                <button type="button" class="btn btn-success my-2 p-1" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" id="buttonInicioSesion">Iniciar Sesión</button>
+                <button class="sesionLogueada bg-dark-subtle"></button>
                 <!--Inicio de Sesion-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ">
-            <div class="modal-header modal-body">
-                <h1 class="modal-title fs-5 w-100 text-center"  id="exampleModalLabel" >Iniciar Sesión</h1>
-                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="conteiner-fluid p-5 mt-3 ">
-                    <form class="formularioLogin" onsubmit="login(event)">
-                        
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electronico</label>
-                            <input type="email" class="w-100 border-top-0 border-end-0 border-start-0" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class=" w-100 border-top-0 border-end-0 border-start-0" id="password" required>
-                        </div>
-                        <button class="btn btn-success my-3 d-block m-auto" type="submit">Iniciar Sesión</button>
-                    </form>
-                    <div class="conteiner d-block m-auto text-center">
-                        <span class="" >¿Todavia no estas registrado?</span>
-                        <button type="button" class="bg-light mx-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="buttonRegistro"><b>Registrarse</b> </button> 
-                    </div>
-                </div>
-            
-            </div>
-            </div>
-        </div>
-    </div> 
-        <!-- Modal Registarse -->
-    
-        
-    
-        <!-- Registro -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5 w-100 text-center " id="staticBackdropLabel">Regístrate</h1>
-                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputName" class="form-label">Nombre</label>
-                            <input type="text" class="w-100 border-top-0 border-end-0 border-start-0"
-                                id="InputName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputApellido" class="form-label">Apellido</label>
-                            <input type="text" class="w-100 border-top-0 border-end-0 border-start-0"
-                                id="InputApellido" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail" class="form-label">Correo Electronico</label>
-                            <input type="email" class=" w-100 border-top-0 border-end-0 border-start-0"
-                                id="InputEmail" aria-describedby="emailHelp">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword" class="form-label">Contraseña</label>
-                            <input type="password" class=" w-100 border-top-0 border-end-0 border-start-0"
-                                id="InputPassword">
-                        </div>
-                        <div class="redes d-flex justify-content-center flex-column mb-5 w-100 text-center">
-                            <h6 class="mb-4">Registrate con:</h6>
-                            <div class="logo d-flex justify-content-around">
-                                <div class="primera-img"><a href="" class="img-logo d-flex justify-content-center"><img src="imgRegister/facebook.png" style="width: 70px;" alt="..."></a></div>
-                                <a href="" class="img-logo d-flex justify-content-center"><img src="imgRegister/instagram.png" style="width: 70px;" alt="..."></a>
-                                <a href="" class="img-logo d-flex justify-content-center"><img src="imgRegister/gorjeo.png" style="width: 70px;" alt="..."></a>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content ">
+                            <div class="modal-header modal-body">
+                                <h1 class="modal-title fs-5 w-100 text-center" id="exampleModalLabel">Iniciar Sesión
+                                </h1>
+                                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="conteiner-fluid p-5 mt-3 ">
+                                    <form class="formularioLogin" onsubmit="login(event)">
+
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Correo Electronico</label>
+                                            <input type="email" class="w-100 border-top-0 border-end-0 border-start-0"
+                                                id="email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Contraseña</label>
+                                            <input type="password"
+                                                class=" w-100 border-top-0 border-end-0 border-start-0" id="password"
+                                                required>
+                                        </div>
+                                        <button class="btn btn-success my-3 d-block m-auto" type="submit">Iniciar
+                                            Sesión</button>
+                                    </form>
+                                    <div class="conteiner d-block m-auto text-center">
+                                        <span class="">¿Todavia no estas registrado?</span>
+                                        <button type="button" class="bg-light mx-2" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop" id="buttonRegistro"><b>Registrarse</b>
+                                        </button>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary mt-3 ms-2" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-success mt-3 ms-2">Registrarme</button>
+                    </div>
+                </div>
+                <!-- Modal Registarse -->
+
+
+
+                <!-- Registro -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 w-100 text-center " id="staticBackdropLabel">Regístrate</h1>
+                                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputName" class="form-label">Nombre</label>
+                                        <input type="text" class="w-100 border-top-0 border-end-0 border-start-0"
+                                            id="InputName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputApellido" class="form-label">Apellido</label>
+                                        <input type="text" class="w-100 border-top-0 border-end-0 border-start-0"
+                                            id="InputApellido" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail" class="form-label">Correo Electronico</label>
+                                        <input type="email" class=" w-100 border-top-0 border-end-0 border-start-0"
+                                            id="InputEmail" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword" class="form-label">Contraseña</label>
+                                        <input type="password" class=" w-100 border-top-0 border-end-0 border-start-0"
+                                            id="InputPassword">
+                                    </div>
+                                    <div class="redes d-flex justify-content-center flex-column mb-5 w-100 text-center">
+                                        <h6 class="mb-4">Registrate con:</h6>
+                                        <div class="logo d-flex justify-content-around">
+                                            <div class="primera-img"><a href=""
+                                                    class="img-logo d-flex justify-content-center"><img
+                                                        src="imgRegister/facebook.png" style="width: 70px;"
+                                                        alt="..."></a></div>
+                                            <a href="" class="img-logo d-flex justify-content-center"><img
+                                                    src="imgRegister/instagram.png" style="width: 70px;" alt="..."></a>
+                                            <a href="" class="img-logo d-flex justify-content-center"><img
+                                                    src="imgRegister/gorjeo.png" style="width: 70px;" alt="..."></a>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary mt-3 ms-2"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-success mt-3 ms-2">Registrarme</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </form>
+                    </div>
+                </div>
+
+                <!--Carrito-->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 w-100 text-center " id="exampleModalLabel">Carrito</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body row d-flex justify-content-center " id="cart-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <a href="#" type="button" class="btn btn-primary">Continuar Comprando</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    
-            <!--Carrito-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body " id="cart-body">
-                    
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-                </div>
+
+        <button type="button" class="btn btn-success mx-2 " data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </button>
             </div>
+
             
-            <!-- Button trigger modal -->
-    
-            <button type="button" class="btn btn-success mx-2 " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button> 
-    </div>
-    
+        </div>
+
     </nav>
     
     
@@ -182,7 +198,7 @@
             <div class="content">
                 <span></span>
                 <div class="img">
-                    <img src="../assets/myAvatarSimón.png" alt="" />
+                    <img src="../assets/myAvatarSimón.png" alt="..." />
                 </div>
                 <h4>Simon Herrera</h4>
                 <h6>Software Ingeniere</h6>
@@ -200,7 +216,7 @@
             <div class="content">
                 <span></span>
                 <div class="img">
-                    <img src="..//assets/myAvatarEmiliano.png" alt="" />
+                    <img src="..//assets/myAvatarEmiliano.png" alt="..." />
                 </div>
                 <h4>Emiliano Acosta</h4>
                 <h6>Software Ingeniere</h6>
@@ -217,7 +233,7 @@
             <div class="content">
                 <span></span>
                 <div class="img">
-                    <img src="../assets/myAvatarMartin.png" alt="" />
+                    <img src="../assets/myAvatarMartin.png" alt="..." />
                 </div>
                 <h4>Martin Gonzalez</h4>
                 <h6>Software Ingeniere</h6>
@@ -234,7 +250,7 @@
             <div class="content">
                 <span></span>
                 <div class="img">
-                    <img src="../assets/myAvatarNolas.png" alt="" />
+                    <img src="../assets/myAvatarNolas.png" alt="..." />
                 </div>
                 <h4>Nolasco Palavecino</h4>
                 <h6>Software Ingeniere</h6>
@@ -251,7 +267,7 @@
             <div class="content">
                 <span></span>
                 <div class="img">
-                    <img src="../assets/myAvatarSebas.png" alt="" />
+                    <img src="../assets/myAvatarSebas.png" alt="..." />
                 </div>
                 <h4>Sebastian Luna</h4>
                 <h6>Software Ingeniere</h6>
@@ -297,7 +313,7 @@
         <footer class="conteiner-Footer">
             <!--Logo-->
             <div class="logo-Ecommerce">
-                <a href="../pages/principal.html"><img src="../assets/logo6-removebg-preview.png" alt=""></a>
+                <a href="../index.html"><img src="../assets/logo6-removebg-preview.png" alt=""></a>
             </div>
 
 
@@ -334,5 +350,4 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

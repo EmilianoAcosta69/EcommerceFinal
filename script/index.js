@@ -1,4 +1,4 @@
-
+// let listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
 
 
 function mostrarProductos(){
@@ -13,8 +13,8 @@ function mostrarProductos(){
         const newProductoCard= document.createElement('div');
         newProductoCard.id = producto.codigo;
         //Agregamos la informacion
-        newProductoCard.classList.add('card','mx-2','d-flex','flex-d-col','justify-content-evenly');
-        newProductoCard.style.width = '18rem'
+        newProductoCard.classList.add('card','d-flex','flex-d-col','justify-content-evenly');
+        newProductoCard.style.width = '15rem'
         newProductoCard.innerHTML = 
         `
         <img src=${imagen} class="card-img-top" alt="">
@@ -22,20 +22,24 @@ function mostrarProductos(){
             <h5 class="card-title text-center">${nombre}</h5>
             <p class="card-text text-center">${descripcion}</p>
             <p class="card-text text-center">$${precio}</p>
-            <a href="#" class="btn btn-primary d-block" onclick = "agregarCarrito(${producto.codigo})">Agregar al Carrito</a>
+            <div class="row m-auto ">
+                <a href="./pages/error404.html" class=" btn bg-secondary-subtle ">Ver mas Detalles</a>
+                <a href="#" class="btn btn-success my-2" onclick = "agregarCarrito(${producto.codigo})">Agregar al Carrito</a>
+
+            </div>
         </div>
         `; 
         //Buscamos al padre
         const padreConteiner = document.querySelector('.div-productos');
         //Adoptamos al hijo
         padreConteiner.appendChild(newProductoCard);
-
         
-        divProductos.append(newProductoCard);
-        newProductoCard.dataset.id = id;
+        
+        // divProductos.append(newProductoCard);
+        // newProductoCard.dataset.id = id;
 
 
-        divProductos.appendChild(fila);
+        // divProductos.appendChild(fila);
 
         console.log(JSON.stringify(producto))
         let productoBack = JSON.stringify(producto);
@@ -60,5 +64,3 @@ function mostrarProductos(){
 }
 
 mostrarProductos();
-
-
